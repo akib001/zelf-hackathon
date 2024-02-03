@@ -1,21 +1,21 @@
-import './App.css';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LoginPage from './pages/LoginPage';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+import "./App.css";
+import { useAuth0 } from "@auth0/auth0-react";
+import LoginPage from "./pages/LoginPage";
+import MainPage from "./pages/MainPage";
 
 function App() {
+  const { isAuthenticated, isLoading } = useAuth0();
+
   return (
-    <Router>
-    <Navigation />
-    <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        {/* <Route path="/videos/:videoId" element={<Video />} />
-        <Route path="/videos/add" element={<Add />} />
-        <Route path="/videos/edit/:videoId" element={<Edit />} /> */}
-    </Routes>
-    {/* <Footer /> */}
-</Router>
+    <>
+      {!isLoading && !isAuthenticated ? (
+        <LoginPage />
+      ) : !isLoading && isAuthenticated ? (
+        <MainPage />
+      ) : (
+        <div>Loading...</div>
+      )}
+    </>
   );
 }
 

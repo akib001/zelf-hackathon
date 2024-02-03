@@ -1,0 +1,32 @@
+.navbar {
+  background: white;
+  border-bottom: 1px solid #e3e4e8;
+}
+/* TODO: move this  */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.circle-icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.circle-icon-button .icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.circle-icon-button:hover {
+  opacity: 0.8;
+}
