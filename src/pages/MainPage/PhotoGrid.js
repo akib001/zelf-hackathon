@@ -32,7 +32,7 @@ const PhotoGrid = ({ data, totalContents }) => {
                       e.target.src = "/profile-icon.svg";
                     }}
                   />
-                  <div>Alison Dominon</div>
+                  <div>{item?.creator?.name}</div>
                 </div>
               </div>
               <div>img footer</div>
