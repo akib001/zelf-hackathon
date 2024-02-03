@@ -1,4 +1,4 @@
-import { getPlaformIcon } from "../../utils/helper";
+import { getPlaformIcon, truncateString } from "../../utils/helper";
 import "./PhotoGrid.css";
 
 const PhotoGrid = ({ data, totalContents }) => {
@@ -35,7 +35,7 @@ const PhotoGrid = ({ data, totalContents }) => {
                           e.target.src = "/profile-icon.svg";
                         }}
                       />
-                      <div>{item?.creator?.name}</div>
+                      <div>{truncateString(item?.creator?.name, 15)}</div>
                     </div>
                     <div>
                       <img
@@ -48,7 +48,20 @@ const PhotoGrid = ({ data, totalContents }) => {
 
                 </div>
               </div>
-              <div>img footer</div>
+              <div className="photo-footer">
+                <div className="photo-title">
+                  <img src="/eye.png" alt="" />
+                  <div>{((item?.content?.total_engagement / item?.content?.views) * 100).toFixed(1)}</div>
+                </div>
+                <div className="photo-title">
+                  <img src="/thumb.svg" alt="" />
+                  <div>{(item?.content?.likes / 10000).toLocaleString()}K</div>
+                </div>
+                <div className="photo-title">
+                  <img src="/chat.svg" alt="" />
+                  <div>{item?.content?.comments}</div>
+                </div>
+              </div>
             </div>
           ))
         ) : (
