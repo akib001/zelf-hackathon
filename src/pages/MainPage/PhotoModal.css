@@ -50,6 +50,11 @@
 .modal-content-container {
     display: flex;
     justify-content: center;
+    gap: 0.5rem;
 
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
 

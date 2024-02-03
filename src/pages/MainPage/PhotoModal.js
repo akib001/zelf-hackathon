@@ -6,7 +6,11 @@ const PhotoModal = ({ isOpen, closeModal, itemData }) => {
       <div className="modal-overlay">
         <div className="modal">
           <div className="modal-content-container">
-            <img src="/back-arrow.svg" alt="back-button" />
+            <img
+              className="cursor-pointer"
+              src="/prev-arrow-icon.svg"
+              alt="back-button"
+            />
             <div className="modal-content">
               <img
                 className="modal-image"
@@ -19,7 +23,11 @@ const PhotoModal = ({ isOpen, closeModal, itemData }) => {
                 </button>
               </div>
             </div>
-            <img src="/next-arrow.svg" alt="next-button" />
+            <img
+              className="cursor-pointer"
+              src="/next-arrow-icon.svg"
+              alt="next-button"
+            />
           </div>
         </div>
       </div>

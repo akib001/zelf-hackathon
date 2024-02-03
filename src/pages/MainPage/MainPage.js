@@ -12,7 +12,11 @@ const MainPage = () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          "https://hackapi.hellozelf.com/frontend/api/v1/contents?page=1"
+          "https://6021-202-84-41-238.ngrok-free.app/api/v1/core/contents/list", {
+            headers: {
+              "Content-Type": "application/json"
+            }
+          }
         );
         const data = await response.json();
         setData(data);
@@ -27,21 +31,21 @@ const MainPage = () => {
 
   return (
     <MainLayout>
-      {!isLoading && data?.data?.length > 0 ? (
+      {!isLoading && data?.results?.length > 0 ? (
         <div className="container">
           <Table
-            tableData={data?.data?.filter(
+            tableData={data?.results?.filter(
               (item) => item?.content?.content_form === "VIDEO"
             )}
           />
           <PhotoGrid
-            data={data?.data?.filter(
+            data={data?.results?.filter(
               (item) => item?.content?.content_form === "IMAGE"
             )}
-            totalContents={data?.total_contents}
+            totalContents={data?.count}
           />
         </div>
-      ) : !isLoading && data?.length === 0 ? (
+      ) : !isLoading && data?.results?.length === 0 ? (
         <div>No Data Found</div>
       ) : (
         <div>Loading...</div>

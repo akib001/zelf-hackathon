@@ -23,6 +23,9 @@ const PhotoGrid = ({ data, totalContents }) => {
                   style={{ width: "100%", objectFit: "cover", height: "300px" }}
                   src={item?.content?.thumbnail_url}
                   alt={item?.content?.title}
+                  onError={(e) => {
+                    e.target.src = "/blank-image.webp";
+                  }}
                 />
                 <div className="photo-bottom-bar">
                   <div className="photo-bottom-img-name-container">
