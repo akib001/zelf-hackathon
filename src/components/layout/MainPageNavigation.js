@@ -8,11 +8,11 @@ const MainPageNavigation = () => {
     <div className="navbar">
       <div className="container nav-container">
         <img src="/color-logo.svg" alt="zelf" />
-        <button class="circle-icon-button">
+        <button className="circle-icon-button">
           <img
             src={user?.picture ? user.picture : "profile-icon.svg"}
             alt="Profile"
-            class="icon"
+            className="icon"
           />
         </button>
       </div>

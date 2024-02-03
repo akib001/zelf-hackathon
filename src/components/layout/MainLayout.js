@@ -2,10 +2,11 @@ import MainPageNavigation from "./MainPageNavigation";
 import Footer from "./Footer";
 
 const MainLayout = ({ children }) => {
+
   return (
     <>
       <MainPageNavigation />
-      {children}
+      <div className="body">{children}</div>
       <Footer />
     </>
   );

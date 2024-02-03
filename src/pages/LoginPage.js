@@ -8,6 +8,7 @@ const LoginPage = () => {
   return (
     <>
       <AuthNavigation />
+      <div style={{background: '#F9FAFA'}}>
       <div className="container login-container">
         <div className="grid-container">
           <div className="col-span-6">
@@ -43,6 +44,7 @@ const LoginPage = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

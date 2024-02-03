@@ -1,0 +1,20 @@
+.photo-grid-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 10fr));
+  gap: 1rem;
+}
+
+.photo-grid > * {
+  width: 100%;
+  column-span: 2;
+}
+
+

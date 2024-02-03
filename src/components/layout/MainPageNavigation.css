@@ -1,13 +1,4 @@
-.navbar {
-  background: white;
-  border-bottom: 1px solid #e3e4e8;
-}
-/* TODO: move this  */
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 .buttons-container {
   display: flex;

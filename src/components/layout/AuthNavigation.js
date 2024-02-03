@@ -5,13 +5,15 @@ const AuthNavigation = () => {
   const { loginWithRedirect } = useAuth0();
 
   return (
-    <div className="container nav-container">
-      <img src="/logo.svg" alt="zelf" />
-      <div className="buttons-container">
-        <button className="text-button" onClick={() => loginWithRedirect()}>
-          Sign In
-        </button>
-        <button className="contained-button">Join</button>
+    <div className="navbar">
+      <div className="container nav-container">
+        <img src="/logo.svg" alt="zelf" />
+        <div className="buttons-container">
+          <button className="text-button" onClick={() => loginWithRedirect()}>
+            Sign In
+          </button>
+          <button className="contained-button">Join</button>
+        </div>
       </div>
     </div>
   );
