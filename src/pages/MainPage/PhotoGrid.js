@@ -17,12 +17,23 @@ const PhotoGrid = ({ data, totalContents }) => {
         {data?.length > 0 ? (
           data?.map((item, index) => (
             <div key={index}>
-              <div>
+              <div className="photo-grid-item">
                 <img
-                  style={{ width: "100%", objectFit: "cover", height: '300px' }}
+                  style={{ width: "100%", objectFit: "cover", height: "300px" }}
                   src={item?.content?.thumbnail_url}
                   alt={item?.content?.title}
                 />
+                <div className="photo-bottom-bar">
+                  <img
+                    className="creator-img"
+                    src={item?.creator?.profile_picture_url}
+                    alt={item?.creator?.name}
+                    onError={(e) => {
+                      e.target.src = "/profile-icon.svg";
+                    }}
+                  />
+                  <div>Alison Dominon</div>
+                </div>
               </div>
               <div>img footer</div>
             </div>

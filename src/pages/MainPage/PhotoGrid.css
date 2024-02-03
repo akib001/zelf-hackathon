@@ -17,4 +17,15 @@
   column-span: 2;
 }
 
+.photo-grid-item {
+  position: relative;
+}
 
+.photo-bottom-bar {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 0 2rem;
+}

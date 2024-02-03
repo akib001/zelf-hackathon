@@ -110,3 +110,9 @@
   display: flex;
   flex-direction: row;
 }
+
+.creator-img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
