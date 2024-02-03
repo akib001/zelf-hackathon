@@ -1,3 +1,4 @@
+import { getPlaformIcon } from "../../utils/helper";
 import "./PhotoGrid.css";
 
 const PhotoGrid = ({ data, totalContents }) => {
@@ -24,6 +25,7 @@ const PhotoGrid = ({ data, totalContents }) => {
                   alt={item?.content?.title}
                 />
                 <div className="photo-bottom-bar">
+                    
                   <img
                     className="creator-img"
                     src={item?.creator?.profile_picture_url}
@@ -33,6 +35,11 @@ const PhotoGrid = ({ data, totalContents }) => {
                     }}
                   />
                   <div>{item?.creator?.name}</div>
+                  <img
+                    className="photo-platform"
+                    src={getPlaformIcon(item?.content?.content_platform)}
+                    alt={item?.content?.content_platform}
+                  />
                 </div>
               </div>
               <div>img footer</div>

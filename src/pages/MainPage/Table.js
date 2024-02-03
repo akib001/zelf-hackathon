@@ -1,19 +1,7 @@
 import "./Table.css";
-import { formatDate, formatNumber, truncateString } from "../../utils/helper";
+import { formatDate, formatNumber, getPlaformIcon, truncateString } from "../../utils/helper";
 
 export const Table = ({ tableData }) => {
-  const getPlaformIcon = (platform) => {
-    switch (platform) {
-      case "instagram":
-        return "/instagram.svg";
-      case "facebook":
-        return "/facebook.svg";
-      case "tiktok":
-        return "/tiktok.svg";
-      default:
-        return "/instagram.svg";
-    }
-  };
 
   return (
     <table>

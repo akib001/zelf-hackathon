@@ -35,3 +35,15 @@ export function formatNumber(number) {
 }
 
 
+export const getPlaformIcon = (platform) => {
+  switch (platform) {
+    case "instagram":
+      return "/instagram.svg";
+    case "facebook":
+      return "/facebook.svg";
+    case "tiktok":
+      return "/tiktok.svg";
+    default:
+      return "/instagram.svg";
+  }
+};

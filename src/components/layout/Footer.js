@@ -1,6 +1,7 @@
 import "./Footer.css";
 
 const Footer = () => {
+
   return (
     <footer>
       <div class="container footer">

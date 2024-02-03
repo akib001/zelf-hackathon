@@ -29,3 +29,9 @@
   color: white;
   padding: 0 6px;
 }
+
+.photo-platform {
+    background: black;
+    border-radius: 50%;
+    padding: 4px;
+}
