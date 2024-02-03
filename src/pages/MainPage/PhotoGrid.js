@@ -26,21 +26,26 @@ const PhotoGrid = ({ data, totalContents }) => {
                 />
                 <div className="photo-bottom-bar">
                   <div className="photo-bottom-img-name-container">
-                    <img
-                      className="creator-img"
-                      src={item?.creator?.profile_picture_url}
-                      alt={item?.creator?.name}
-                      onError={(e) => {
-                        e.target.src = "/profile-icon.svg";
-                      }}
-                    />
-                    <div>{item?.creator?.name}</div>
+                    <div className="photo-title">
+                      <img
+                        className="creator-img"
+                        src={item?.creator?.profile_picture_url}
+                        alt={item?.creator?.name}
+                        onError={(e) => {
+                          e.target.src = "/profile-icon.svg";
+                        }}
+                      />
+                      <div>{item?.creator?.name}</div>
+                    </div>
+                    <div>
+                      <img
+                        className="photo-platform"
+                        src={getPlaformIcon(item?.content?.content_platform)}
+                        alt={item?.content?.content_platform}
+                      />
+                    </div>
                   </div>
-                  <img
-                    className="photo-platform"
-                    src={getPlaformIcon(item?.content?.content_platform)}
-                    alt={item?.content?.content_platform}
-                  />
+
                 </div>
               </div>
               <div>img footer</div>
