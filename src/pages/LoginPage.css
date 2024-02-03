@@ -1,0 +1,60 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+}
+
+.col-span-6 {
+    grid-column: span 6;
+}
+
+.register-account-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 50px;
+}
+
+.register-account {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.login-container {
+    padding: 20px;
+}
+
+.login-btns-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+}
+
+
+.start-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+.full-width-btn {
+  width: 100%;
+  padding: 12px 1rem;
+}
+
+.already-member-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.already-member {
+    font-size: 1rem;
+    color: #767B8A;
+}
