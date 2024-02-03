@@ -15,11 +15,11 @@ export function truncateString(inputString, maxLength) {
 export function formatNumber(number) {
   try {
     if (typeof number !== "number") {
-      throw new Error("Invalid input. Please provide a number.");
+      throw new Error("Invalid.");
     }
 
     if (number < 0) {
-      throw new Error("Invalid input. Please provide a positive number.");
+      throw new Error("Invalid.");
     }
 
     if (number >= 1000) {
